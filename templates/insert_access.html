@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <center>
+        <h1>insert_access</h1>
+        <form method="POST">
+            {% csrf_token %}
+        <label for="pk">ID</label>
+        <input type="number" name="pk" id="pk">
+            <br>
+            <br>
+
+            
+        <label for="name">Name</label>
+        <select name="name" id="name">
+            {% for WO in LWO %}
+            <option value="{{WO.pk}}">{{WO.name}}</option>
+            {% endfor %}
+        </select>
+        <br>
+        <br>
+        <label for="aut">Author</label>
+        <input type="text" name="aut" id="aut">
+        <br>
+        <br>
+        <label for="da">Date</label>
+        <input type="date" name="da" id="da">
+        <br>
+        <br>
+        <input type="submit" value="Insert">
+        </form>
+
+    </center>
+</body>
+</html>
