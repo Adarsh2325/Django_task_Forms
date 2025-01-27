@@ -23,6 +23,7 @@ urlpatterns = [
     path('insert_webpage/',insert_webpage,name='insert_webpage'),
     path('insert_access/',insert_access,name='insert_access'),
     path('select_multiple/',select_multiple,name='select_multiple'),
+    path('checkbox/',checkbox,name='checkbox'),
     
     
 ]

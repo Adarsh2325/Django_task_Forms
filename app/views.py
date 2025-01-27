@@ -59,3 +59,8 @@ def select_multiple(request):
      
 
     return render(request,'select_multiple.html',d)
+
+def checkbox(request):
+    LTO=Topic.objects.all()
+    d={'LTO':LTO}
+    return render(request,'checkbox.html',d)
